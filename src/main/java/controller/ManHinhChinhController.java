@@ -21,6 +21,7 @@ import javafx.scene.layout.VBox;
 import javafx.scene.media.AudioClip;
 import javafx.stage.Stage;
 import lombok.SneakyThrows;
+import repository.NguoiDungRepositoryImpl;
 import view.Main;
 import utility.SoundClick;
 import java.io.File;
@@ -155,10 +156,8 @@ public class ManHinhChinhController implements Initializable {
         SoundClick.playSound();
 
         Stage stage = (Stage) dangXuatButton.getScene().getWindow();
-
         FXMLLoader fxmlLoader = new FXMLLoader(Main.class.getResource("dangNhap.fxml"));
         Scene scene = new Scene(fxmlLoader.load());
-
         //stage.setTitle("Đăng nhập");
         stage.setScene(scene);
         stage.setResizable(false);

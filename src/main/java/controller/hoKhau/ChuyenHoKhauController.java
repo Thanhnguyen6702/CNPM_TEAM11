@@ -100,10 +100,10 @@ public class ChuyenHoKhauController {
     }
 
     private boolean check_field(){
-        if(dia_chi_chuyen_den_cd.getText().equals("")) return true;
-        if(tinh_thanh_cd.getText().equals("")) return true;
-        if(quan_huyen_cd.getText().equals("")) return true;
-        if(phuong_xa_cd.getText().equals("")) return true;
+        if(dia_chi_chuyen_den_cd.getText().trim().equals("")) return true;
+        if(tinh_thanh_cd.getText().trim().equals("")) return true;
+        if(quan_huyen_cd.getText().trim().equals("")) return true;
+        if(phuong_xa_cd.getText().trim().equals("")) return true;
         if(this.getNgay_chuyen_den() == null) return true;
         if(this.getNgay_chuyen_den().equals("")) return true;
         return false;

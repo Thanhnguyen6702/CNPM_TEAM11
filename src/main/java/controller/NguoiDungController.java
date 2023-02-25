@@ -59,9 +59,9 @@ public class NguoiDungController {
 
         //sound
         SoundClick.playSound();
-
         //check tai khoan
         if (taiKhoan.getText().isBlank() == false && matKhau.getText().isBlank() == false) {
+            System.out.println(taiKhoan.getText()+" "+ matKhau.getText());
             if (nguoiDungRepository.dangNhap(taiKhoan.getText(), matKhau.getText())) {
                 Stage stage = (Stage) dangNhapButton.getScene().getWindow();
 

@@ -23,6 +23,7 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.time.LocalDate;
+import java.time.Period;
 import java.util.ResourceBundle;
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -153,6 +154,11 @@ public class KhaiTuController implements Initializable {
             alert.setContentText("Nhập các trường dữ liệu bắt buộc");
             alert.showAndWait();
 
+        } else if(ngayMat.compareTo(ngayKhaiBao)>0) {
+            Alert alert = new Alert(Alert.AlertType.ERROR);
+            alert.setHeaderText(null);
+            alert.setContentText("Khai báo ngày mất lại trước ngày mất ?");
+            alert.showAndWait();
         } else {
 
             //thêm LSHD
